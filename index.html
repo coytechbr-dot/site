@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary High-Ticket B2B SEO Meta Tags -->
+  <title>CoyTech | Inteligência Artificial, Automação e Desenvolvimento de Sistemas B2B</title>
+  <meta
+    name="description"
+    content="Pare de perder dinheiro com processos manuais. Escale com Inteligência Artificial. Desenvolvemos, implementamos e monitoramos soluções tecnológicas que reduzem custos e aumentam sua margem de lucro."
+  />
+  <meta
+    name="keywords"
+    content="CoyTech, Inteligência Artificial B2B, Automação de Processos, Sistemas Personalizados, Sistemas Modelos Plug and Play, Redução de Custos Operacionais, Integração SAP TOTVS Salesforce Power BI"
+  />
+  <meta name="author" content="CoyTech Enterprise Technology" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#16222f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="CoyTech | Pare de perder dinheiro com processos manuais. Escale com IA." />
+  <meta
+    property="og:description"
+    content="Desenvolvemos, implementamos e monitoramos soluções tecnológicas que integram seus departamentos, eliminam gargalos e aumentam sua margem de lucro."
+  />
+  <meta property="og:image" content="./assets/logo-coytech.webp" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN configurado estritamente para a Regra 60-30-10 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            /* 60% Cor Dominante: Branco */
+            dominant: '#ffffff',
+            /* 30% Cor Secundária: Azul Acinzentado (Slate / Steel Blue) */
+            steel: {
+              50: '#f3f7fa',
+              100: '#eaf0f6',
+              200: '#d5e1ec',
+              300: '#b8cadb',
+              400: '#89a5be',
+              500: '#52738e',
+              600: '#3d5a73',
+              700: '#2b4156',
+              800: '#1e2d3d',
+              900: '#16222f'
+            },
+            /* 10% Cor de Destaque: Azul Elétrico High-Conversion */
+            accent: {
+              DEFAULT: '#0066ff',
+              hover: '#0052cc',
+              soft: 'rgba(0, 102, 255, 0.08)'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Stylesheet (60-30-10 Design Rules) -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="bg-dominant text-steel-900 antialiased selection:bg-accent selection:text-white">
+  <!-- ========================================================================
+       1. HEADER FLUTUANTE (100% Transparente no Topo + Glassmorphism #080D16 no Scroll)
+       ======================================================================== -->
+  <header
+    id="site-header"
+    class="site-header fixed top-0 inset-x-0 z-50 transition-all duration-300"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Logo à esquerda -->
+      <a
+        href="#inicio"
+        class="inline-flex items-center gap-3 focus:outline-none py-1"
+        aria-label="CoyTech - Página Inicial"
+      >
+        <img
+          src="./assets/logo-coytech.webp"
+          alt="Logo CoyTech"
+          class="h-7 sm:h-8 w-auto object-contain"
+        />
+      </a>
+
+      <!-- Links à direita: Soluções, Diferencial, Metodologia, FAQ + Botão CTA (10%) -->
+      <div class="hidden md:flex items-center gap-8">
+        <nav class="flex items-center gap-7" aria-label="Navegação Principal">
+          <a
+            href="#solucoes"
+            class="nav-link text-sm font-semibold text-steel-300 hover:text-white transition-colors"
+          >Soluções</a>
+          <a
+            href="#diferencial"
+            class="nav-link text-sm font-semibold text-steel-300 hover:text-white transition-colors"
+          >Diferencial</a>
+          <a
+            href="#metodologia"
+            class="nav-link text-sm font-semibold text-steel-300 hover:text-white transition-colors"
+          >Metodologia</a>
+          <a
+            href="#faq"
+            class="nav-link text-sm font-semibold text-steel-300 hover:text-white transition-colors"
+          >FAQ</a>
+        </nav>
+
+        <!-- Botão CTA destacado usando a cor dos 10% -->
+        <a
+          href="#contato"
+          class="btn-accent-10 px-5 py-2.5 rounded-xl text-sm font-bold inline-flex items-center gap-2"
+        >
+          <span>Fale com um especialista</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Botão Menu Mobile -->
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menu de navegação"
+        class="md:hidden w-10 h-10 rounded-xl border border-steel-700 bg-steel-800 text-white flex items-center justify-center focus:outline-none"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="hidden w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Mobile -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-steel-900 border-b border-steel-800 px-4 pt-3 pb-6 space-y-3"
+    >
+      <nav class="flex flex-col space-y-1.5" aria-label="Navegação Mobile">
+        <a href="#solucoes" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-steel-200 hover:bg-steel-800 hover:text-white">Soluções</a>
+        <a href="#diferencial" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-steel-200 hover:bg-steel-800 hover:text-white">Diferencial</a>
+        <a href="#metodologia" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-steel-200 hover:bg-steel-800 hover:text-white">Metodologia</a>
+        <a href="#faq" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-steel-200 hover:bg-steel-800 hover:text-white">FAQ</a>
+      </nav>
+      <div class="pt-2">
+        <a
+          href="#contato"
+          class="btn-accent-10 w-full py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2"
+        >
+          <span>Fale com um especialista</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION (A DOBRA PRINCIPAL DE IMPACTO COM ANIMAÇÃO "CODE RAIN")
+         Fundo base #080D16 + Canvas Code Rain (Azul Claro / Cyan) + Overlay Radial
+         ====================================================================== -->
+    <section
+      id="inicio"
+      class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 hero-coderain-section overflow-hidden"
+      aria-labelledby="hero-headline"
+    >
+      <!-- Canvas da Animação Code Rain (Estilo Matrix Coytech em #080D16 + Cyan/Azul) -->
+      <canvas
+        id="hero-code-rain"
+        class="absolute inset-0 w-full h-full pointer-events-none z-0"
+        aria-hidden="true"
+      ></canvas>
+
+      <!-- Película / Gradiente Radial para máxima legibilidade do texto principal -->
+      <div
+        class="hero-coderain-overlay absolute inset-0 pointer-events-none z-[1]"
+        aria-hidden="true"
+      ></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          <!-- Coluna Esquerda: Headline, Sub-headline e CTAs -->
+          <div class="lg:col-span-7 space-y-7 reveal is-visible">
+            <div
+              class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#080D16]/80 backdrop-blur-md border border-steel-700 text-xs font-mono font-bold text-steel-200"
+            >
+              <span class="w-2 h-2 rounded-full bg-[#22d3ee] animate-ping"></span>
+              <span>DESENVOLVIMENTO SOB MEDIDA • INTELIGÊNCIA ARTIFICIAL &amp; AUTOMAÇÃO</span>
+            </div>
+
+            <!-- Headline Exata -->
+            <h1
+              id="hero-headline"
+              class="text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight text-white leading-[1.12] drop-shadow-sm"
+            >
+              Transforme gargalos operacionais em margem de lucro.
+              <span class="text-[#38bdf8]">Escale com Inteligência Artificial.</span>
+            </h1>
+
+            <!-- Sub-headline Exata -->
+            <h2
+              class="text-base sm:text-lg lg:text-xl font-normal text-steel-200 leading-relaxed max-w-2xl"
+            >
+              Desenvolvemos, implementamos e monitoramos ecossistemas de automação que integram seus departamentos, eliminam o trabalho manual e preparam sua empresa para o próximo nível de escala.
+            </h2>
+
+            <!-- CTAs Exatos -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a
+                href="#contato"
+                class="btn-accent-10 px-7 py-4 rounded-xl text-base font-bold inline-flex items-center justify-center gap-3 group"
+              >
+                <span>Fale conosco</span>
+                <svg
+                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+
+              <a
+                href="#solucoes"
+                class="px-7 py-4 rounded-xl text-base font-bold text-white bg-[#080D16]/60 backdrop-blur-sm border border-steel-600 hover:border-[#38bdf8] hover:text-[#38bdf8] inline-flex items-center justify-center gap-2 transition-all"
+              >
+                <span>Conhecer Soluções</span>
+              </a>
+            </div>
+
+            <!-- Métricas de Autoridade Executiva -->
+            <div class="pt-6 border-t border-steel-800 grid grid-cols-3 gap-6 max-w-lg">
+              <div>
+                <div class="text-2xl sm:text-3xl font-extrabold font-mono text-white">
+                  -42<span class="text-[#38bdf8]">%</span>
+                </div>
+                <p class="text-xs text-steel-300 font-semibold mt-0.5">Custo operacional (OPEX)</p>
+              </div>
+              <div>
+                <div class="text-2xl sm:text-3xl font-extrabold font-mono text-white">
+                  3.4<span class="text-[#38bdf8]">x</span>
+                </div>
+                <p class="text-xs text-steel-300 font-semibold mt-0.5">ROI médio no 1º ano</p>
+              </div>
+              <div>
+                <div class="text-2xl sm:text-3xl font-extrabold font-mono text-white">
+                  24<span class="text-[#38bdf8]">/7</span>
+                </div>
+                <p class="text-xs text-steel-300 font-semibold mt-0.5">Monitoramento contínuo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Painel Executivo Clean (60% Branco + 30% Azul Acinzentado + 10% Accent) -->
+          <div class="lg:col-span-5 reveal delay-200 is-visible">
+            <div class="card-b2b rounded-3xl border border-steel-200 bg-dominant p-6 sm:p-7 shadow-xl">
+              <!-- Barra Superior do Painel em Azul Acinzentado -->
+              <div class="flex items-center justify-between pb-4 mb-5 border-b border-steel-200">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-steel-900 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block text-xs font-extrabold text-steel-900 uppercase tracking-wider">
+                      Telemetria de Margem &amp; IA
+                    </span>
+                    <span class="block text-[11px] font-mono text-steel-500">
+                      Operação Integrada em Tempo Real
+                    </span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-mono font-bold text-accent bg-accent-soft px-3 py-1 rounded-full">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping"></span>
+                  ATIVO
+                </span>
+              </div>
+
+              <!-- KPIs Principais -->
+              <div class="grid grid-cols-2 gap-3.5 mb-5">
+                <div class="p-4 rounded-2xl bg-steel-50 border border-steel-200">
+                  <span class="text-[11px] font-mono font-semibold text-steel-500 block">
+                    Margem Recuperada
+                  </span>
+                  <div class="flex items-baseline justify-between mt-1">
+                    <span class="text-xl font-extrabold font-mono text-steel-900">+R$ 148k/mês</span>
+                    <span class="text-xs font-mono font-bold text-accent">▲ 31%</span>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-steel-50 border border-steel-200">
+                  <span class="text-[11px] font-mono font-semibold text-steel-500 block">
+                    Processos Manuais
+                  </span>
+                  <div class="flex items-baseline justify-between mt-1">
+                    <span class="text-xl font-extrabold font-mono text-steel-900">-89%</span>
+                    <span class="text-xs font-mono font-bold text-steel-600">Automatizados</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gráfico Limpo de Crescimento de Receita vs. Custo Manual -->
+              <div class="p-4 rounded-2xl bg-dominant border border-steel-200 mb-5">
+                <div class="flex items-center justify-between text-xs mb-3">
+                  <span class="font-bold text-steel-800">Escala de Receita vs. Custo Manual</span>
+                  <span class="font-mono font-semibold text-accent">+240% Eficiência</span>
+                </div>
+                <svg class="w-full h-32 overflow-visible" viewBox="0 0 360 110" fill="none" aria-label="Gráfico de eficiência operacional">
+                  <defs>
+                    <linearGradient id="accentArea" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#0066ff" stop-opacity="0.18" />
+                      <stop offset="100%" stop-color="#0066ff" stop-opacity="0.0" />
+                    </linearGradient>
+                  </defs>
+                  <line x1="0" y1="20" x2="360" y2="20" stroke="#eaf0f6" stroke-width="1" />
+                  <line x1="0" y1="55" x2="360" y2="55" stroke="#eaf0f6" stroke-width="1" />
+                  <line x1="0" y1="90" x2="360" y2="90" stroke="#eaf0f6" stroke-width="1" />
+
+                  <!-- Curva de Custo Manual caindo (30% Azul Acinzentado) -->
+                  <path
+                    d="M10 30 C 90 38, 165 65, 250 82 C 295 90, 325 96, 350 98"
+                    stroke="#89a5be"
+                    stroke-width="2"
+                    stroke-dasharray="4 4"
+                    fill="none"
+                  />
+
+                  <!-- Curva de Receita subindo (10% Accent) -->
+                  <path
+                    d="M10 95 C 85 86, 145 62, 220 38 C 275 22, 315 14, 350 8 L 350 105 L 10 105 Z"
+                    fill="url(#accentArea)"
+                  />
+                  <path
+                    d="M10 95 C 85 86, 145 62, 220 38 C 275 22, 315 14, 350 8"
+                    stroke="#0066ff"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    fill="none"
+                  />
+
+                  <circle cx="145" cy="62" r="4" fill="#0066ff" />
+                  <circle cx="250" cy="30" r="4.5" fill="#0066ff" />
+                  <circle cx="350" cy="8" r="5.5" fill="#0066ff" />
+                </svg>
+                <div class="flex items-center justify-between text-[11px] font-mono text-steel-500 mt-2">
+                  <span class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-accent inline-block"></span> Margem &amp; Receita
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-0.5 bg-steel-400 inline-block"></span> Retrabalho Manual
+                  </span>
+                </div>
+              </div>
+
+              <!-- Fluxo de Departamentos Sincronizados -->
+              <div class="space-y-2 text-xs">
+                <div class="px-3.5 py-2.5 rounded-xl bg-steel-50 border border-steel-200 flex items-center justify-between">
+                  <span class="font-semibold text-steel-800">ERP ↔ Financeiro &amp; Faturamento</span>
+                  <span class="font-mono font-bold text-accent">100% Automático</span>
+                </div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-steel-50 border border-steel-200 flex items-center justify-between">
+                  <span class="font-semibold text-steel-800">CRM ↔ Agentes de IA Comercial</span>
+                  <span class="font-mono font-bold text-accent">Tempo Real</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. SOCIAL PROOF (CONFIANÇA IMEDIATA LOGO ABAIXO DA HERO)
+         Representações visuais SVG em escala de cinza (grayscale) alinhadas
+         horizontalmente: SAP, TOTVS, Salesforce, Power BI e Google Workspace
+         ====================================================================== -->
+    <section
+      class="py-12 bg-steel-50/70 border-y border-steel-200"
+      aria-label="Ferramentas e ecossistemas integráveis"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs sm:text-sm font-mono font-bold uppercase tracking-widest text-steel-500 mb-8">
+          Integrável com as maiores ferramentas do mercado
+        </p>
+
+        <!-- Barra Horizontal de Logos em Escala de Cinza (Grayscale) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 items-center justify-items-center">
+          <!-- 1. SAP -->
+          <div
+            class="partner-logo w-full h-20 px-6 rounded-2xl bg-dominant border border-steel-200 flex items-center justify-center gap-3 grayscale hover:grayscale-0 transition-all duration-300 shadow-sm"
+            title="Integração nativa com SAP ERP & S/4HANA"
+          >
+            <svg class="w-10 h-10 text-steel-700 shrink-0" viewBox="0 0 48 32" fill="none" aria-hidden="true">
+              <path d="M4 4H44L33 28H4V4Z" fill="currentColor" />
+              <text x="9" y="21" fill="#ffffff" font-family="Inter, sans-serif" font-weight="800" font-size="12" letter-spacing="0.5">SAP</text>
+            </svg>
+            <div class="text-left">
+              <span class="block font-sans font-extrabold text-lg tracking-tight text-steel-800 leading-none">SAP</span>
+              <span class="block text-[10px] font-mono text-steel-500 uppercase mt-0.5">ERP / S/4HANA</span>
+            </div>
+          </div>
+
+          <!-- 2. TOTVS -->
+          <div
+            class="partner-logo w-full h-20 px-6 rounded-2xl bg-dominant border border-steel-200 flex items-center justify-center gap-3 grayscale hover:grayscale-0 transition-all duration-300 shadow-sm"
+            title="Integração nativa com TOTVS Protheus, RM e Datasul"
+          >
+            <svg class="w-9 h-9 text-steel-700 shrink-0" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="18" cy="18" r="14" stroke="currentColor" stroke-width="3.2" />
+              <circle cx="18" cy="18" r="5" fill="currentColor" />
+              <path d="M18 4V10M18 26V32M4 18H10M26 18H32" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+            </svg>
+            <div class="text-left">
+              <span class="block font-sans font-extrabold text-lg tracking-wider text-steel-800 leading-none">TOTVS</span>
+              <span class="block text-[10px] font-mono text-steel-500 uppercase mt-0.5">Protheus &amp; RM</span>
+            </div>
+          </div>
+
+          <!-- 3. Salesforce -->
+          <div
+            class="partner-logo w-full h-20 px-6 rounded-2xl bg-dominant border border-steel-200 flex items-center justify-center gap-3 grayscale hover:grayscale-0 transition-all duration-300 shadow-sm"
+            title="Integração nativa com Salesforce CRM"
+          >
+            <svg class="w-10 h-10 text-steel-700 shrink-0" viewBox="0 0 40 28" fill="currentColor" aria-hidden="true">
+              <path d="M31.2 24H10.8C6.5 24 3 20.6 3 16.4c0-3.7 2.7-6.8 6.3-7.4C10.6 5 14.3 2 18.8 2c4.1 0 7.7 2.5 9.2 6.1 1-.3 2-.5 3.2-.5 4.3 0 7.8 3.5 7.8 7.8 0 4.8-3.5 8.6-7.8 8.6z" />
+            </svg>
+            <div class="text-left">
+              <span class="block font-sans font-extrabold text-base tracking-tight text-steel-800 leading-none">Salesforce</span>
+              <span class="block text-[10px] font-mono text-steel-500 uppercase mt-0.5">Enterprise CRM</span>
+            </div>
+          </div>
+
+          <!-- 4. Power BI -->
+          <div
+            class="partner-logo w-full h-20 px-6 rounded-2xl bg-dominant border border-steel-200 flex items-center justify-center gap-3 grayscale hover:grayscale-0 transition-all duration-300 shadow-sm"
+            title="Integração nativa com Microsoft Power BI"
+          >
+            <svg class="w-9 h-9 text-steel-700 shrink-0" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+              <rect x="4" y="16" width="6" height="12" rx="1.8" opacity="0.55" />
+              <rect x="13" y="10" width="6" height="18" rx="1.8" opacity="0.78" />
+              <rect x="22" y="4" width="6" height="24" rx="1.8" />
+            </svg>
+            <div class="text-left">
+              <span class="block font-sans font-extrabold text-base tracking-tight text-steel-800 leading-none">Power BI</span>
+              <span class="block text-[10px] font-mono text-steel-500 uppercase mt-0.5">Analytics &amp; Data</span>
+            </div>
+          </div>
+
+          <!-- 5. Google Workspace -->
+          <div
+            class="partner-logo col-span-2 sm:col-span-1 w-full h-20 px-6 rounded-2xl bg-dominant border border-steel-200 flex items-center justify-center gap-3 grayscale hover:grayscale-0 transition-all duration-300 shadow-sm"
+            title="Integração nativa com Google Workspace & Cloud"
+          >
+            <svg class="w-9 h-9 text-steel-700 shrink-0" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path
+                d="M27.6 16.3c0-.9-.1-1.8-.2-2.6H16v5h6.5c-.3 1.5-1.1 2.8-2.4 3.7v3h3.9c2.3-2.1 3.6-5.2 3.6-9.1z"
+                fill="currentColor"
+              />
+              <path
+                d="M16 28c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H5.2v3.1C7.2 25.3 11.3 28 16 28z"
+                fill="currentColor"
+                opacity="0.82"
+              />
+              <path
+                d="M9.3 18.3c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3v-3.1H5.2C4.4 12.2 4 14.1 4 16s.4 3.8 1.2 5.4l4.1-3.1z"
+                fill="currentColor"
+                opacity="0.65"
+              />
+              <path
+                d="M16 8.7c1.8 0 3.3.6 4.6 1.8l3.4-3.4C21.9 5.2 19.2 4 16 4 11.3 4 7.2 6.7 5.2 10.6l4.1 3.1c.9-2.9 3.6-5 6.7-5z"
+                fill="currentColor"
+                opacity="0.9"
+              />
+            </svg>
+            <div class="text-left">
+              <span class="block font-sans font-extrabold text-sm tracking-tight text-steel-800 leading-tight">Google Workspace</span>
+              <span class="block text-[10px] font-mono text-steel-500 uppercase mt-0.5">Cloud &amp; Produtividade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. SEÇÃO DE BENEFÍCIOS (A DOR E A SOLUÇÃO)
+         Fundo em tom levíssimo de Azul Acinzentado (30%) + 4 Cards Brancos (60%) + Ícones (10%)
+         ====================================================================== -->
+    <section
+      id="beneficios"
+      class="py-20 lg:py-28 bg-steel-50 border-b border-steel-200"
+      aria-labelledby="benefits-heading"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14 reveal">
+          <span
+            class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-steel-700 bg-dominant border border-steel-200 px-3.5 py-1 rounded-full mb-3"
+          >
+            A DOR OPERACIONAL E A SOLUÇÃO DEFINITIVA
+          </span>
+          <h2
+            id="benefits-heading"
+            class="text-3xl sm:text-4xl font-extrabold text-steel-900 tracking-tight mb-4"
+          >
+            Onde sua Empresa Ganha ao Automatizar com Inteligência
+          </h2>
+          <p class="text-base text-steel-600 leading-relaxed">
+            Substituímos controles manuais vulneráveis por arquitetura tecnológica focada em resultado financeiro direto.
+          </p>
+        </div>
+
+        <!-- 4 Cards Brancos renderizados modularmente via components.js -->
+        <div id="benefits-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. SEÇÃO DE SOLUÇÕES (MODALIDADES DE NEGÓCIO) + BANNER DE DIFERENCIAL
+         Fundo Branco (60%) + Bordas e Tipografia Azul Acinzentado (30%) + Destaques (10%)
+         ====================================================================== -->
+    <section id="solucoes" class="py-20 lg:py-28 bg-dominant" aria-labelledby="solutions-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+          <span
+            class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-steel-700 bg-steel-50 border border-steel-200 px-3.5 py-1 rounded-full mb-3"
+          >
+            MODALIDADES DE NEGÓCIO
+          </span>
+          <h2
+            id="solutions-heading"
+            class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-steel-900 tracking-tight mb-4"
+          >
+            Arquitetura Tecnológica para o Momento da sua Operação
+          </h2>
+          <p class="text-base sm:text-lg text-steel-600 leading-relaxed">
+            Duas frentes de arquitetura de sistemas para destravar o crescimento da sua empresa com máxima velocidade e segurança.
+          </p>
+        </div>
+
+        <!-- Duas Colunas: Sistemas Personalizados & Sistemas Modelos (Plug & Play) -->
+        <div class="grid lg:grid-cols-2 gap-8 items-stretch mb-14">
+          <!-- Card 1: Sistemas Personalizados -->
+          <article class="card-b2b rounded-3xl p-8 sm:p-10 flex flex-col justify-between reveal">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-6">
+                <div class="icon-box-10 w-14 h-14 rounded-2xl flex items-center justify-center">
+                  <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                  </svg>
+                </div>
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-steel-50 text-steel-700 border border-steel-200">
+                  Desenvolvimento Tailor-Made
+                </span>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-steel-900 mb-4">
+                Sistemas Personalizados
+              </h3>
+
+              <p class="text-base text-steel-600 leading-relaxed mb-7">
+                Criados do zero para mapear e resolver os gargalos exclusivos da sua operação. O software se adapta à sua empresa.
+              </p>
+
+              <ul class="space-y-3.5 pt-6 border-t border-steel-200 mb-8 text-sm text-steel-700">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong class="text-steel-900">Regras de negócio exclusivas:</strong> Desenhado sob medida para fluxos complexos e proprietários.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong class="text-steel-900">Agentes de IA dedicados:</strong> Treinados sobre a base documental e histórica da sua organização.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong class="text-steel-900">Sem licenças por usuário:</strong> Escale sua operação sem custos variáveis por colaborador.</span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="#contato"
+              class="btn-accent-10 w-full py-4 px-6 rounded-xl text-sm font-bold flex items-center justify-center gap-2"
+            >
+              <span>Entre em contato</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- Card 2: Sistemas Modelos (Plug & Play) -->
+          <article class="card-b2b rounded-3xl p-8 sm:p-10 flex flex-col justify-between reveal delay-200">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-6">
+                <div class="icon-box-10 w-14 h-14 rounded-2xl flex items-center justify-center">
+                  <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-steel-50 text-steel-700 border border-steel-200">
+                  Implantação Acelerada
+                </span>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-steel-900 mb-4">
+                Sistemas Modelos (Plug &amp; Play)
+              </h3>
+
+              <p class="text-base text-steel-600 leading-relaxed mb-7">
+                Soluções padronizadas de alta performance, prontas para serem configuradas e implementadas rapidamente no seu ecossistema.
+              </p>
+
+              <ul class="space-y-3.5 pt-6 border-t border-steel-200 mb-8 text-sm text-steel-700">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong class="text-steel-900">Go-Live em semanas:</strong> Estrutura pré-validada para conciliação, triagem IA, portais B2B e BI.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong class="text-steel-900">Conectores nativos prontos:</strong> Integração imediata com SAP, TOTVS, Salesforce e bancos.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong class="text-steel-900">Payback acelerado:</strong> Menor investimento inicial com captura rápida de eficiência.</span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="#contato"
+              class="btn-accent-10 w-full py-4 px-6 rounded-xl text-sm font-bold flex items-center justify-center gap-2"
+            >
+              <span>Fale com um especialista</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </article>
+        </div>
+
+        <!-- Bloco de Destaque (Diferencial Exato) -->
+        <div
+          id="diferencial"
+          class="rounded-3xl bg-steel-900 text-dominant p-8 sm:p-12 border border-steel-800 shadow-xl reveal"
+        >
+          <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8 space-y-3">
+              <span class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-steel-300">
+                COMPROMISSO PONTA A PONTA COYTECH
+              </span>
+              <blockquote class="text-2xl sm:text-3xl font-extrabold text-dominant leading-snug">
+                “Vamos do planejamento à implementação e monitoramento contínuo. Entregamos processos eficientes, não apenas código.”
+              </blockquote>
+            </div>
+            <div class="lg:col-span-4 flex lg:justify-end">
+              <a
+                href="#contato"
+                class="btn-accent-10 px-7 py-4 rounded-xl text-sm font-bold inline-flex items-center justify-center gap-2.5 w-full sm:w-auto"
+              >
+                <span>Fale conosco</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. SHOWCASE DE SISTEMA / CRM INTELIGENTE (MOCKUP INTERATIVO)
+         Substitui a antiga calculadora por um Browser Mockup de CRM + Kanban + IA
+         com Tooltips Flutuantes ao redor e CTA "Fale com um especialista"
+         ====================================================================== -->
+    <section
+      id="showcase-crm"
+      class="py-20 lg:py-28 bg-gradient-to-b from-steel-50 via-dominant to-steel-50 border-y border-steel-200 overflow-hidden"
+      aria-labelledby="showcase-crm-heading"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Cabeçalho da Seção -->
+        <div class="max-w-3xl mx-auto text-center mb-14 lg:mb-16 reveal">
+          <span
+            class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-accent bg-accent-soft border border-accent/20 px-3.5 py-1 rounded-full mb-3"
+          >
+            SHOWCASE DE SISTEMA &amp; CRM INTELIGENTE
+          </span>
+          <h2
+            id="showcase-crm-heading"
+            class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-steel-900 tracking-tight leading-tight mb-4"
+          >
+            A gestão da sua operação evoluiu.
+            <span class="text-accent">Assuma o controle com IA.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-steel-600 leading-relaxed">
+            Sistemas personalizados e CRMs inteligentes que automatizam o atendimento, qualificam leads e rodam processos sozinhos.
+          </p>
+        </div>
+
+        <!-- Container Relativo do Mockup Flutuante + Tooltips Ao Redor -->
+        <div class="relative max-w-6xl mx-auto pt-4 pb-6 lg:px-10 reveal delay-100">
+          <!-- Glow Ambiental Sutil atrás do Mockup -->
+          <div
+            class="hidden lg:block absolute -inset-4 bg-gradient-to-r from-steel-200/40 via-accent/10 to-steel-200/40 rounded-[2.5rem] blur-2xl pointer-events-none"
+            aria-hidden="true"
+          ></div>
+
+          <!-- TOOLTIP FLUTUANTE 1: Automação de WhatsApp (Canto Superior Esquerdo) -->
+          <div
+            class="showcase-tooltip lg:absolute lg:-top-6 lg:left-2 z-20 mb-4 lg:mb-0 bg-dominant/95 backdrop-blur-md border-2 border-accent/30 rounded-2xl p-3.5 shadow-[0_18px_40px_-10px_rgba(22,34,47,0.18)] flex items-center gap-3.5 max-w-xs mx-auto lg:mx-0"
+          >
+            <div class="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-sm">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-extrabold text-steel-900">Automação de WhatsApp</span>
+                <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+              </div>
+              <p class="text-[11px] text-steel-600 font-medium mt-0.5">
+                Agente IA qualificando leads 24/7 em 0.8s
+              </p>
+            </div>
+          </div>
+
+          <!-- TOOLTIP FLUTUANTE 2: Análise de Dados em Tempo Real (Canto Superior Direito) -->
+          <div
+            class="showcase-tooltip showcase-tooltip-delayed lg:absolute lg:-top-6 lg:right-2 z-20 mb-4 lg:mb-0 bg-[#080D16] text-dominant border border-steel-700 rounded-2xl p-3.5 shadow-[0_20px_45px_-10px_rgba(8,13,22,0.45)] flex items-center gap-3.5 max-w-xs mx-auto lg:mx-0"
+          >
+            <div class="w-10 h-10 rounded-xl bg-accent/20 border border-accent text-accent flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-white block">Análise de Dados em Tempo Real</span>
+              <p class="text-[11px] font-mono text-steel-300 mt-0.5">
+                Previsibilidade de receita: <strong class="text-white">+34.8%</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- TOOLTIP FLUTUANTE 3: Recuperação de Clientes (Canto Inferior Direito) -->
+          <div
+            class="showcase-tooltip lg:absolute lg:-bottom-5 lg:right-8 z-20 mt-4 lg:mt-0 bg-dominant/95 backdrop-blur-md border-2 border-steel-200 rounded-2xl p-3.5 shadow-[0_18px_40px_-10px_rgba(22,34,47,0.18)] flex items-center gap-3.5 max-w-xs mx-auto lg:mx-0"
+          >
+            <div class="w-10 h-10 rounded-xl bg-steel-900 text-white flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-steel-900 block">Recuperação de Clientes</span>
+              <p class="text-[11px] text-steel-600 font-medium mt-0.5">
+                Follow-up autônomo: <strong class="text-accent">18 propostas reativadas</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- JANELA FLUTUANTE DE NAVEGADOR (MOCKUP DE CRM & KANBAN IA) -->
+          <div
+            class="relative z-10 rounded-3xl bg-[#080D16] border border-steel-700/80 shadow-[0_30px_70px_-15px_rgba(8,13,22,0.35)] overflow-hidden"
+          >
+            <!-- Barra de Navegador (Browser Chrome) -->
+            <div class="bg-[#080D16] border-b border-steel-800 px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-steel-600"></span>
+                <span class="w-3 h-3 rounded-full bg-steel-500"></span>
+                <span class="w-3 h-3 rounded-full bg-accent"></span>
+              </div>
+
+              <!-- Barra de URL Flutuante -->
+              <div class="flex-1 max-w-md mx-auto px-4 py-1.5 rounded-lg bg-steel-900/90 border border-steel-800 flex items-center justify-center gap-2 text-xs font-mono text-steel-300">
+                <svg class="w-3.5 h-3.5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span class="truncate">app.coytech.com.br/crm-ai-pipeline</span>
+              </div>
+
+              <div class="hidden sm:flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-accent/20 border border-accent/40 text-[11px] font-mono font-bold text-white">
+                  ● IA AUTÔNOMA ATIVA
+                </span>
+              </div>
+            </div>
+
+            <!-- Corpo do Sistema: Sidebar Escura (#080D16) + Workspace Principal Clean (60% Branco) -->
+            <div class="grid lg:grid-cols-12 bg-dominant">
+              <!-- Sidebar Esquerda do Sistema -->
+              <aside class="hidden lg:flex lg:col-span-3 bg-[#080D16] text-steel-300 p-5 flex-col justify-between border-r border-steel-800">
+                <div class="space-y-6">
+                  <div class="flex items-center justify-between px-2">
+                    <img src="./assets/logo-coytech.webp" alt="CoyTech OS" class="h-6 w-auto object-contain" />
+                    <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-steel-800 text-steel-300">v4.8</span>
+                  </div>
+
+                  <nav class="space-y-1.5 text-xs font-semibold" aria-label="Menu do Mockup CRM">
+                    <div class="px-3 py-2.5 rounded-xl bg-accent text-white flex items-center justify-between">
+                      <span class="flex items-center gap-2.5">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                        </svg>
+                        Pipeline &amp; Kanban IA
+                      </span>
+                      <span class="font-mono text-[10px] bg-white/20 px-1.5 py-0.5 rounded">42</span>
+                    </div>
+
+                    <div class="px-3 py-2.5 rounded-xl text-steel-300 hover:bg-steel-900 flex items-center justify-between">
+                      <span class="flex items-center gap-2.5">
+                        <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                        Atendimento WhatsApp IA
+                      </span>
+                      <span class="w-2 h-2 rounded-full bg-accent"></span>
+                    </div>
+
+                    <div class="px-3 py-2.5 rounded-xl text-steel-300 hover:bg-steel-900 flex items-center gap-2.5">
+                      <svg class="w-4 h-4 text-steel-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                      Recuperação de Clientes
+                    </div>
+
+                    <div class="px-3 py-2.5 rounded-xl text-steel-300 hover:bg-steel-900 flex items-center gap-2.5">
+                      <svg class="w-4 h-4 text-steel-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                      </svg>
+                      Sincronização ERP / SAP
+                    </div>
+                  </nav>
+                </div>
+
+                <!-- Status de Processos Rodando Sozinhos -->
+                <div class="p-3.5 rounded-2xl bg-steel-900/90 border border-steel-800 space-y-2">
+                  <div class="flex items-center justify-between text-[11px]">
+                    <span class="font-mono text-steel-300">Automações Hoje</span>
+                    <span class="font-mono font-bold text-white">1.284 execuções</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-steel-800 overflow-hidden">
+                    <div class="w-11/12 h-full bg-accent rounded-full"></div>
+                  </div>
+                  <p class="text-[10px] text-steel-400">Zero intervenção humana necessária</p>
+                </div>
+              </aside>
+
+              <!-- Área Principal do CRM (60% Branco + 30% Azul Acinzentado + 10% Accent) -->
+              <div class="lg:col-span-9 p-5 sm:p-7 bg-steel-50/60 space-y-6">
+                <!-- Linha de Métricas Superiores do Dashboard -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+                  <div class="p-4 rounded-2xl bg-dominant border border-steel-200 shadow-sm">
+                    <span class="text-[11px] font-mono text-steel-500 block">Leads Qualificados (IA)</span>
+                    <div class="flex items-baseline justify-between mt-1">
+                      <strong class="text-xl font-extrabold font-mono text-steel-900">318</strong>
+                      <span class="text-[11px] font-mono font-bold text-accent">+42%</span>
+                    </div>
+                  </div>
+
+                  <div class="p-4 rounded-2xl bg-dominant border border-steel-200 shadow-sm">
+                    <span class="text-[11px] font-mono text-steel-500 block">Tempo de Resposta</span>
+                    <div class="flex items-baseline justify-between mt-1">
+                      <strong class="text-xl font-extrabold font-mono text-steel-900">0.8s</strong>
+                      <span class="text-[11px] font-mono font-bold text-steel-600">WhatsApp IA</span>
+                    </div>
+                  </div>
+
+                  <div class="p-4 rounded-2xl bg-dominant border border-steel-200 shadow-sm">
+                    <span class="text-[11px] font-mono text-steel-500 block">Pipeline Ativo</span>
+                    <div class="flex items-baseline justify-between mt-1">
+                      <strong class="text-xl font-extrabold font-mono text-steel-900">R$ 2,4M</strong>
+                      <span class="text-[11px] font-mono font-bold text-accent">Em negociação</span>
+                    </div>
+                  </div>
+
+                  <div class="p-4 rounded-2xl bg-dominant border border-steel-200 shadow-sm">
+                    <span class="text-[11px] font-mono text-steel-500 block">Clientes Recuperados</span>
+                    <div class="flex items-baseline justify-between mt-1">
+                      <strong class="text-xl font-extrabold font-mono text-steel-900">+R$ 390k</strong>
+                      <span class="text-[11px] font-mono font-bold text-accent">Automático</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quadro Kanban de Operação & CRM Inteligente (3 Colunas) -->
+                <div class="grid md:grid-cols-3 gap-4">
+                  <!-- Coluna Kanban 1: Triagem & Qualificação IA -->
+                  <div class="rounded-2xl bg-steel-100/80 border border-steel-200 p-3.5 space-y-3">
+                    <div class="flex items-center justify-between px-1">
+                      <span class="text-xs font-extrabold text-steel-800 uppercase tracking-wider flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-accent"></span>
+                        1. Triagem IA (WhatsApp)
+                      </span>
+                      <span class="text-xs font-mono font-bold text-steel-600 bg-dominant px-2 py-0.5 rounded-md border border-steel-200">14</span>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-dominant border border-steel-200 shadow-sm space-y-2">
+                      <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-mono font-bold text-accent bg-accent-soft px-2 py-0.5 rounded">Score IA: 96%</span>
+                        <span class="text-[10px] font-mono text-steel-400">Agora</span>
+                      </div>
+                      <p class="text-xs font-extrabold text-steel-900">Grupo Atlas Logística</p>
+                      <p class="text-[11px] text-steel-600">Orçamento validado pelo Agente IA • Integração SAP solicitada.</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-dominant border border-steel-200 shadow-sm space-y-2">
+                      <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-mono font-bold text-steel-700 bg-steel-100 px-2 py-0.5 rounded">Reativação Automática</span>
+                        <span class="text-[10px] font-mono text-steel-400">há 3m</span>
+                      </div>
+                      <p class="text-xs font-extrabold text-steel-900">Vértice Industrial S.A.</p>
+                      <p class="text-[11px] text-steel-600">Cliente inativo respondeu ao follow-up preditivo no WhatsApp.</p>
+                    </div>
+                  </div>
+
+                  <!-- Coluna Kanban 2: Proposta & Follow-up Autônomo -->
+                  <div class="rounded-2xl bg-steel-100/80 border border-steel-200 p-3.5 space-y-3">
+                    <div class="flex items-center justify-between px-1">
+                      <span class="text-xs font-extrabold text-steel-800 uppercase tracking-wider flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-steel-700"></span>
+                        2. Proposta &amp; Follow-up
+                      </span>
+                      <span class="text-xs font-mono font-bold text-steel-600 bg-dominant px-2 py-0.5 rounded-md border border-steel-200">9</span>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-dominant border border-steel-200 shadow-sm space-y-2">
+                      <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-mono font-bold text-accent bg-accent-soft px-2 py-0.5 rounded">Contrato Gerado</span>
+                        <span class="text-[10px] font-mono font-bold text-steel-800">R$ 185.000</span>
+                      </div>
+                      <p class="text-xs font-extrabold text-steel-900">Rede MedPrime Clínicas</p>
+                      <p class="text-[11px] text-steel-600">Minuta enviada automaticamente e reunião agendada na agenda do diretor.</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-dominant border border-steel-200 shadow-sm space-y-2">
+                      <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-mono font-bold text-steel-700 bg-steel-100 px-2 py-0.5 rounded">Análise de Crédito OK</span>
+                        <span class="text-[10px] font-mono font-bold text-steel-800">R$ 94.000</span>
+                      </div>
+                      <p class="text-xs font-extrabold text-steel-900">Distribuidora Horizonte</p>
+                      <p class="text-[11px] text-steel-600">Consulta cadastral e KYC aprovados em 4 segundos via API.</p>
+                    </div>
+                  </div>
+
+                  <!-- Coluna Kanban 3: Fechado & Integrado ao ERP -->
+                  <div class="rounded-2xl bg-steel-100/80 border border-steel-200 p-3.5 space-y-3">
+                    <div class="flex items-center justify-between px-1">
+                      <span class="text-xs font-extrabold text-steel-800 uppercase tracking-wider flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-accent"></span>
+                        3. Implantação &amp; ERP
+                      </span>
+                      <span class="text-xs font-mono font-bold text-steel-600 bg-dominant px-2 py-0.5 rounded-md border border-steel-200">19</span>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-dominant border-2 border-accent/40 shadow-sm space-y-2">
+                      <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-mono font-bold text-white bg-accent px-2 py-0.5 rounded">Faturado no ERP</span>
+                        <span class="text-[10px] font-mono font-bold text-steel-900">R$ 320.000</span>
+                      </div>
+                      <p class="text-xs font-extrabold text-steel-900">Construtora &amp; Incorporadora Sul</p>
+                      <p class="text-[11px] text-steel-600">Nota fiscal emitida, onboarding disparado e dashboard liberado.</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-steel-900 text-dominant space-y-1.5">
+                      <div class="flex items-center justify-between text-[11px] font-mono">
+                        <span class="text-steel-300">Eficiência do Funil</span>
+                        <span class="text-white font-bold">+3.4x Conversão</span>
+                      </div>
+                      <p class="text-[11px] text-steel-300">
+                        100% dos leads atendidos sem fila de espera humana.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botão (CTA) abaixo do mockup: "Fale com um especialista" -->
+        <div class="mt-12 text-center reveal delay-200">
+          <a
+            href="#contato"
+            class="btn-accent-10 px-8 py-4 rounded-xl text-base font-bold inline-flex items-center justify-center gap-3 group"
+          >
+            <span>Fale com um especialista</span>
+            <svg
+              class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.3"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6.5 SEÇÃO DE ECOSSISTEMA E INTEGRAÇÕES (DIAGRAMA CENTRALIZADO)
+         Fundo 100% Branco (#FFFFFF), Textos e Linhas Conectivas em #080D16
+         e Detalhes dos Ícones na Cor de Acento (10% - #0066FF)
+         ====================================================================== -->
+    <section
+      id="ecossistema-integracoes"
+      class="py-20 lg:py-28 bg-white border-b border-steel-200"
+      aria-labelledby="ecosystem-heading"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Cabeçalho da Seção -->
+        <div class="max-w-3xl mx-auto text-center mb-14 lg:mb-16 reveal">
+          <span
+            class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-[#080D16] bg-steel-50 border border-[#080D16]/20 px-3.5 py-1 rounded-full mb-3"
+          >
+            ECOSSISTEMA E INTEGRAÇÕES NATIVAS
+          </span>
+          <h2
+            id="ecosystem-heading"
+            class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#080D16] tracking-tight leading-tight mb-4"
+          >
+            Conecta com tudo que sua empresa já usa.
+          </h2>
+          <p class="text-base sm:text-lg text-[#080D16]/80 leading-relaxed">
+            Nossa arquitetura de IA e automação chega somando, integrando-se nativamente ao seu ERP, CRM e banco de dados atual, sem bagunçar a sua operação.
+          </p>
+        </div>
+
+        <!-- Diagrama Visual Centralizado (Hub Coytech + Linhas Conectivas Finas em #080D16) -->
+        <div class="relative max-w-6xl mx-auto reveal delay-100">
+          <!-- Camada SVG de Linhas Conectivas Finas (Visível em Desktop) -->
+          <svg
+            class="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-0"
+            viewBox="0 0 1100 460"
+            fill="none"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <!-- Linhas Conectivas Finas Esquerda -> Centro (550, 230) -->
+            <path d="M260 65 C 400 65, 430 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+            <path d="M260 175 C 390 175, 440 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+            <path d="M260 285 C 390 285, 440 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+            <path d="M260 395 C 400 395, 430 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+
+            <!-- Linhas Conectivas Finas Direita -> Centro (550, 230) -->
+            <path d="M840 65 C 700 65, 670 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+            <path d="M840 175 C 710 175, 660 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+            <path d="M840 285 C 710 285, 660 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+            <path d="M840 395 C 700 395, 670 230, 550 230" stroke="#080D16" stroke-width="1.5" />
+
+            <!-- Pontos de Terminação e Acento (10% #0066FF e #080D16) -->
+            <circle cx="260" cy="65" r="4.5" fill="#0066FF" />
+            <circle cx="260" cy="175" r="4.5" fill="#080D16" />
+            <circle cx="260" cy="285" r="4.5" fill="#0066FF" />
+            <circle cx="260" cy="395" r="4.5" fill="#080D16" />
+
+            <circle cx="840" cy="65" r="4.5" fill="#0066FF" />
+            <circle cx="840" cy="175" r="4.5" fill="#080D16" />
+            <circle cx="840" cy="285" r="4.5" fill="#0066FF" />
+            <circle cx="840" cy="395" r="4.5" fill="#080D16" />
+
+            <!-- Nós Intermediários nas Linhas para Harmonia Visual -->
+            <circle cx="405" cy="145" r="3.5" fill="#0066FF" />
+            <circle cx="405" cy="315" r="3.5" fill="#0066FF" />
+            <circle cx="695" cy="145" r="3.5" fill="#0066FF" />
+            <circle cx="695" cy="315" r="3.5" fill="#0066FF" />
+          </svg>
+
+          <!-- Grid de 3 Colunas (4 Nós à Esquerda | Hub Central Coytech | 4 Nós à Direita) -->
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+            <!-- COLUNA ESQUERDA: 4 Sistemas Corporativos -->
+            <div class="lg:col-span-4 space-y-4">
+              <!-- Nó 1: SAP -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-accent-soft border border-accent/25 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-[#080D16]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">SAP ERP &amp; S/4HANA</h3>
+                    <p class="text-xs text-[#080D16]/70">Sincronização fiscal e financeira</p>
+                  </div>
+                </div>
+                <span class="w-2.5 h-2.5 rounded-full bg-accent shrink-0" title="Conector Ativo"></span>
+              </div>
+
+              <!-- Nó 2: TOTVS -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-steel-50 border border-[#080D16]/15 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="8" stroke="#080D16" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8M8 12h8" stroke="#0066FF" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">TOTVS (Protheus / RM)</h3>
+                    <p class="text-xs text-[#080D16]/70">Automação de backoffice e estoque</p>
+                  </div>
+                </div>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#080D16] shrink-0"></span>
+              </div>
+
+              <!-- Nó 3: Salesforce -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-accent-soft border border-accent/25 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">Salesforce &amp; CRMs</h3>
+                    <p class="text-xs text-[#080D16]/70">Leads e funil comercial bidirecional</p>
+                  </div>
+                </div>
+                <span class="w-2.5 h-2.5 rounded-full bg-accent shrink-0"></span>
+              </div>
+
+              <!-- Nó 4: Power BI -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-steel-50 border border-[#080D16]/15 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-[#080D16]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">Power BI &amp; Analytics</h3>
+                    <p class="text-xs text-[#080D16]/70">Dashboards executivos em tempo real</p>
+                  </div>
+                </div>
+                <span class="w-2.5 h-2.5 rounded-full bg-accent shrink-0"></span>
+              </div>
+            </div>
+
+            <!-- COLUNA CENTRAL: Hub Coytech (Núcleo de IA e Orquestração) -->
+            <div class="lg:col-span-4 flex flex-col items-center justify-center py-6 lg:py-0">
+              <div class="relative flex items-center justify-center">
+                <!-- Anéis Externos de Conexão -->
+                <div class="hub-pulse-ring absolute -inset-6 rounded-full border border-accent/35 pointer-events-none"></div>
+                <div class="absolute -inset-3 rounded-full border border-[#080D16]/20 pointer-events-none"></div>
+
+                <!-- Núcleo Central Coytech (#080D16) -->
+                <div
+                  class="relative z-10 w-48 h-48 sm:w-52 sm:h-52 rounded-full bg-[#080D16] border-4 border-accent shadow-[0_20px_50px_rgba(8,13,22,0.28)] flex flex-col items-center justify-center p-6 text-center"
+                >
+                  <img
+                    src="./assets/logo-coytech.webp"
+                    alt="Coytech Hub Central"
+                    class="h-8 sm:h-9 w-auto object-contain mb-2.5"
+                  />
+                  <span class="text-[11px] font-mono font-bold uppercase tracking-widest text-white block">
+                    CORE IA &amp; AUTOMAÇÃO
+                  </span>
+                  <span class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent text-white text-[10px] font-mono font-bold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+                    HUB ATIVO 24/7
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- COLUNA DIREITA: 4 Sistemas & Tecnologias Corporativas -->
+            <div class="lg:col-span-4 space-y-4">
+              <!-- Nó 5: WhatsApp Business API -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <span class="hidden lg:inline-block w-2.5 h-2.5 rounded-full bg-accent shrink-0"></span>
+                <div class="flex items-center gap-3.5 flex-1">
+                  <div class="w-11 h-11 rounded-xl bg-accent-soft border border-accent/25 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">WhatsApp Business API</h3>
+                    <p class="text-xs text-[#080D16]/70">Agentes de atendimento e triagem 24/7</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nó 6: Bancos de Dados SQL -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <span class="hidden lg:inline-block w-2.5 h-2.5 rounded-full bg-[#080D16] shrink-0"></span>
+                <div class="flex items-center gap-3.5 flex-1">
+                  <div class="w-11 h-11 rounded-xl bg-steel-50 border border-[#080D16]/15 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-[#080D16]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <ellipse cx="12" cy="5" rx="9" ry="3" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" stroke="#0066FF" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">Bancos de Dados SQL</h3>
+                    <p class="text-xs text-[#080D16]/70">PostgreSQL, Oracle, SQL Server e MySQL</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nó 7: APIs REST & Webhooks -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <span class="hidden lg:inline-block w-2.5 h-2.5 rounded-full bg-accent shrink-0"></span>
+                <div class="flex items-center gap-3.5 flex-1">
+                  <div class="w-11 h-11 rounded-xl bg-accent-soft border border-accent/25 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">APIs REST &amp; Webhooks</h3>
+                    <p class="text-xs text-[#080D16]/70">Barramento seguro com sistemas legados</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nó 8: Google Workspace & Cloud -->
+              <div class="integration-node rounded-2xl p-4 flex items-center justify-between gap-3">
+                <span class="hidden lg:inline-block w-2.5 h-2.5 rounded-full bg-[#080D16] shrink-0"></span>
+                <div class="flex items-center gap-3.5 flex-1">
+                  <div class="w-11 h-11 rounded-xl bg-steel-50 border border-[#080D16]/15 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-[#080D16]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-extrabold text-[#080D16]">Google Workspace &amp; E-mail</h3>
+                    <p class="text-xs text-[#080D16]/70">Agenda, planilhas e documentos integrados</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. SEÇÃO DE METODOLOGIA (TIMELINE DE 4 PASSOS — FUNDO ESCURO #080D16 EFEITO ZEBRA)
+         1. Diagnóstico de Gargalos. 2. Planejamento da Solução.
+         3. Implementação e Treinamento. 4. Monitoramento Contínuo.
+         ====================================================================== -->
+    <section id="metodologia" class="py-20 lg:py-28 bg-[#080D16] text-white border-b border-steel-800" aria-labelledby="methodology-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+          <span
+            class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-[#38bdf8] bg-[#121C2D] border border-[#22d3ee]/35 px-3.5 py-1 rounded-full mb-3"
+          >
+            METODOLOGIA DE EXECUÇÃO
+          </span>
+          <h2
+            id="methodology-heading"
+            class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4"
+          >
+            4 Passos para Transformar sua Operação
+          </h2>
+          <p class="text-base text-steel-200 leading-relaxed">
+            Arquitetura de sistemas previsível, sem interrupções na rotina da sua empresa e com foco em payback rápido.
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Linha vertical da Timeline -->
+          <div
+            class="timeline-line-30 absolute left-5 md:left-1/3 top-2 bottom-2 w-0.5 -ml-px"
+            aria-hidden="true"
+          ></div>
+
+          <!-- 4 Passos renderizados via components.js -->
+          <div id="methodology-timeline" class="space-y-10"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. SEÇÃO DE FAQ (PERGUNTAS FREQUENTES B2B)
+         ====================================================================== -->
+    <section
+      id="faq"
+      class="py-20 lg:py-24 bg-steel-50 border-t border-steel-200"
+      aria-labelledby="faq-heading"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <span
+            class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-steel-700 bg-dominant border border-steel-200 px-3.5 py-1 rounded-full mb-3"
+          >
+            PERGUNTAS FREQUENTES (FAQ)
+          </span>
+          <h2 id="faq-heading" class="text-2xl sm:text-3xl font-extrabold text-steel-900">
+            Respostas Diretas para Decisores e Diretores
+          </h2>
+        </div>
+
+        <div id="faq-accordion" class="space-y-4"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8.5 SEÇÃO DE SOLUÇÕES — CARDS DE PLANOS / CAMINHOS (PRICING / SERVICES CARDS)
+         Localizada imediatamente antes do rodapé, com 4 cards lado a lado,
+         Card 2 em destaque (#080D16 com textos em branco) e botões "Entre em contato"
+         alinhados na mesma altura.
+         ====================================================================== -->
+    <section
+      id="planos-solucoes"
+      class="py-20 lg:py-28 bg-white border-t border-steel-200"
+      aria-labelledby="plans-heading"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Cabeçalho da Seção -->
+        <div class="max-w-3xl mx-auto text-center mb-14 lg:mb-16 reveal">
+          <span
+            class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-accent bg-accent-soft border border-accent/20 px-3.5 py-1 rounded-full mb-3"
+          >
+            CAMINHOS DE TRANSFORMAÇÃO
+          </span>
+          <h2
+            id="plans-heading"
+            class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#080D16] tracking-tight leading-tight mb-4"
+          >
+            A solução exata para o momento da sua empresa.
+          </h2>
+          <p class="text-base sm:text-lg text-steel-600 leading-relaxed">
+            Escolha como deseja iniciar a transformação tecnológica do seu negócio.
+          </p>
+        </div>
+
+        <!-- Grid Lado a Lado (4 Cards com mesma altura e botões alinhados na base) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 items-stretch">
+          <!-- CARD 1: Quero automatizar minha empresa -->
+          <article
+            class="group bg-white text-[#080D16] rounded-3xl p-7 sm:p-8 border border-steel-200 shadow-sm hover:shadow-[0_24px_48px_-12px_rgba(8,13,22,0.16)] hover:-translate-y-1.5 hover:border-accent transition-all duration-300 flex flex-col justify-between h-full reveal delay-100"
+          >
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-accent-soft border border-accent/20 text-accent flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono font-bold text-steel-500 bg-steel-50 border border-steel-200 px-3 py-1 rounded-full">
+                  Caminho 01
+                </span>
+              </div>
+
+              <h3 class="text-xl font-extrabold text-[#080D16] mb-3 leading-snug">
+                Quero automatizar minha empresa
+              </h3>
+
+              <p class="text-sm text-steel-600 leading-relaxed mb-8">
+                Elimine processos manuais, integre IA no atendimento e reduza custos operacionais rapidamente.
+              </p>
+            </div>
+
+            <div class="mt-auto pt-5 border-t border-steel-200">
+              <a
+                href="#contato"
+                class="btn-accent-10 w-full py-3.5 px-5 rounded-xl text-sm font-bold inline-flex items-center justify-center gap-2"
+              >
+                <span>Entre em contato</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 2 (DESTAQUE): Quero criar um sistema (Fundo #080D16 com textos em branco) -->
+          <article
+            class="group relative bg-[#080D16] text-white rounded-3xl p-7 sm:p-8 border-2 border-accent shadow-[0_20px_50px_-12px_rgba(8,13,22,0.42)] hover:shadow-[0_28px_60px_-10px_rgba(0,102,255,0.38)] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between h-full reveal delay-200"
+          >
+            <!-- Selo Superior de Destaque -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span class="px-3.5 py-1 rounded-full bg-accent text-white text-[11px] font-mono font-bold uppercase tracking-wider shadow-md whitespace-nowrap">
+                ★ Mais Procurado
+              </span>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-6 pt-1">
+                <div class="w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center shadow-md">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono font-bold text-white/90 bg-white/10 border border-white/15 px-3 py-1 rounded-full">
+                  Caminho 02
+                </span>
+              </div>
+
+              <h3 class="text-xl font-extrabold text-white mb-3 leading-snug">
+                Quero criar um sistema
+              </h3>
+
+              <p class="text-sm text-white/85 leading-relaxed mb-8">
+                Desenvolvimento de softwares sob medida, CRMs e ERPs focados em resolver os gargalos exclusivos da sua operação.
+              </p>
+            </div>
+
+            <div class="mt-auto pt-5 border-t border-white/15">
+              <a
+                href="#contato"
+                class="btn-accent-10 w-full py-3.5 px-5 rounded-xl text-sm font-bold inline-flex items-center justify-center gap-2"
+              >
+                <span>Entre em contato</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 3: Quero um monitoramento -->
+          <article
+            class="group bg-white text-[#080D16] rounded-3xl p-7 sm:p-8 border border-steel-200 shadow-sm hover:shadow-[0_24px_48px_-12px_rgba(8,13,22,0.16)] hover:-translate-y-1.5 hover:border-accent transition-all duration-300 flex flex-col justify-between h-full reveal delay-300"
+          >
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-accent-soft border border-accent/20 text-accent flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono font-bold text-steel-500 bg-steel-50 border border-steel-200 px-3 py-1 rounded-full">
+                  Caminho 03
+                </span>
+              </div>
+
+              <h3 class="text-xl font-extrabold text-[#080D16] mb-3 leading-snug">
+                Quero um monitoramento
+              </h3>
+
+              <p class="text-sm text-steel-600 leading-relaxed mb-8">
+                Infraestrutura dedicada com observabilidade 24/7 para garantir a estabilidade e segurança dos seus dados.
+              </p>
+            </div>
+
+            <div class="mt-auto pt-5 border-t border-steel-200">
+              <a
+                href="#contato"
+                class="btn-accent-10 w-full py-3.5 px-5 rounded-xl text-sm font-bold inline-flex items-center justify-center gap-2"
+              >
+                <span>Entre em contato</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 4: Quero uma assessoria completa -->
+          <article
+            class="group bg-white text-[#080D16] rounded-3xl p-7 sm:p-8 border border-steel-200 shadow-sm hover:shadow-[0_24px_48px_-12px_rgba(8,13,22,0.16)] hover:-translate-y-1.5 hover:border-accent transition-all duration-300 flex flex-col justify-between h-full reveal delay-400"
+          >
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-accent-soft border border-accent/20 text-accent flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono font-bold text-steel-500 bg-steel-50 border border-steel-200 px-3 py-1 rounded-full">
+                  Caminho 04
+                </span>
+              </div>
+
+              <h3 class="text-xl font-extrabold text-[#080D16] mb-3 leading-snug">
+                Quero uma assessoria completa
+              </h3>
+
+              <p class="text-sm text-steel-600 leading-relaxed mb-8">
+                Do diagnóstico de gargalos à implementação de um ecossistema tecnológico completo com acompanhamento contínuo.
+              </p>
+            </div>
+
+            <div class="mt-auto pt-5 border-t border-steel-200">
+              <a
+                href="#contato"
+                class="btn-accent-10 w-full py-3.5 px-5 rounded-xl text-sm font-bold inline-flex items-center justify-center gap-2"
+              >
+                <span>Entre em contato</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. FOOTER E CTA FINAL
+       Fundo em #080D16 (Efeito Zebra) com textos em branco à esquerda e
+       Formulário flutuando em um Card Branco de alto contraste à direita.
+       ======================================================================== -->
+  <footer
+    id="contato"
+    class="bg-[#080D16] text-dominant border-t border-steel-800 pt-20 pb-14"
+    aria-labelledby="footer-cta-heading"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Bloco Principal de Conversão Final -->
+      <div class="grid lg:grid-cols-12 gap-12 items-start pb-16 border-b border-steel-800">
+        <!-- Coluna Esquerda: Copywriting de Fechamento High-Ticket -->
+        <div class="lg:col-span-6 space-y-6">
+          <span
+            class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#38bdf8] bg-[#121C2D] border border-[#22d3ee]/30 px-3.5 py-1.5 rounded-full"
+          >
+            <span class="w-2 h-2 rounded-full bg-[#22d3ee]"></span>
+            DIAGNÓSTICO EXECUTIVO B2B
+          </span>
+
+          <!-- Headline Exata -->
+          <h2
+            id="footer-cta-heading"
+            class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.14]"
+          >
+            A ineficiência está custando caro. Mude o jogo hoje.
+          </h2>
+
+          <p class="text-base sm:text-lg text-steel-200 leading-relaxed max-w-xl">
+            Agende uma conversa estratégica com nossos especialistas. Mapearemos seus gargalos atuais e apresentaremos o plano de automação e IA ideal para a sua operação.
+          </p>
+
+          <div class="pt-2 space-y-3 text-xs text-steel-200 font-medium">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#22d3ee] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Atendimento direto por Especialistas em Arquitetura de Sistemas e IA.</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#22d3ee] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Sigilo absoluto (NDA) e conformidade integral com a LGPD.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Formulário Flutuando em Card Branco de Alto Contraste sobre o Fundo #080D16 -->
+        <div class="lg:col-span-6">
+          <form
+            id="b2b-contact-form"
+            class="rounded-3xl bg-white text-[#080D16] p-7 sm:p-10 border border-steel-200 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65)] space-y-5"
+            novalidate
+          >
+            <div class="pb-4 border-b border-steel-200">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-accent block mb-1">
+                ATENDIMENTO EXECUTIVO
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-[#080D16]">
+                Preencha para Agendar seu Diagnóstico
+              </h3>
+            </div>
+
+            <!-- Grid organizado com os 4 campos lado a lado -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <!-- Input 1: Nome Completo -->
+              <div>
+                <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-[#080D16] mb-2">
+                  Nome Completo *
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  required
+                  placeholder="Digite seu nome completo"
+                  class="w-full px-4 py-3.5 rounded-xl bg-steel-50 border border-steel-200 text-sm text-[#080D16] placeholder-steel-400 focus:outline-none focus:bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all"
+                />
+              </div>
+
+              <!-- Input 2: E-mail Corporativo -->
+              <div>
+                <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-[#080D16] mb-2">
+                  E-mail Corporativo *
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  required
+                  placeholder="seu.nome@empresa.com.br"
+                  class="w-full px-4 py-3.5 rounded-xl bg-steel-50 border border-steel-200 text-sm text-[#080D16] placeholder-steel-400 focus:outline-none focus:bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all"
+                />
+              </div>
+
+              <!-- Input 3: Cargo -->
+              <div>
+                <label for="contact-role" class="block text-xs font-bold uppercase tracking-wider text-[#080D16] mb-2">
+                  Cargo *
+                </label>
+                <input
+                  type="text"
+                  id="contact-role"
+                  name="role"
+                  required
+                  placeholder="Ex: CEO, Diretor, Gerente de TI"
+                  class="w-full px-4 py-3.5 rounded-xl bg-steel-50 border border-steel-200 text-sm text-[#080D16] placeholder-steel-400 focus:outline-none focus:bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all"
+                />
+              </div>
+
+              <!-- Input 4: WhatsApp -->
+              <div>
+                <label for="contact-whatsapp" class="block text-xs font-bold uppercase tracking-wider text-[#080D16] mb-2">
+                  WhatsApp *
+                </label>
+                <input
+                  type="tel"
+                  id="contact-whatsapp"
+                  name="whatsapp"
+                  required
+                  placeholder="(11) 99999-9999"
+                  class="w-full px-4 py-3.5 rounded-xl bg-steel-50 border border-steel-200 text-sm text-[#080D16] placeholder-steel-400 focus:outline-none focus:bg-white focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Botão de Submit usando a cor de destaque 10% -->
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="btn-accent-10 w-full py-4 px-6 rounded-xl text-base font-bold inline-flex items-center justify-center gap-2.5"
+              >
+                <span>Fale com um especialista</span>
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Feedback de Envio -->
+            <div id="form-feedback" class="hidden" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Rodapé Institucional Inferior -->
+      <div class="pt-10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-steel-300">
+        <div class="flex items-center gap-4">
+          <a href="#inicio" class="inline-block focus:outline-none">
+            <img
+              src="./assets/logo-coytech.webp"
+              alt="Logo CoyTech"
+              class="h-7 w-auto object-contain"
+            />
+          </a>
+          <span class="text-steel-400">|</span>
+          <span>Inteligência Artificial, Automação &amp; Sistemas B2B</span>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <a href="#solucoes" class="hover:text-white transition-colors">Soluções</a>
+          <a href="#diferencial" class="hover:text-white transition-colors">Diferencial</a>
+          <a href="#metodologia" class="hover:text-white transition-colors">Metodologia</a>
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+          <a href="mailto:contato@coytech.com.br" class="font-mono text-white hover:underline">contato@coytech.com.br</a>
+        </div>
+
+        <p class="text-steel-400">
+          © 2026 CoyTech. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Modulares -->
+  <script src="./js/components.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
