@@ -13,7 +13,7 @@
   const WHATSAPP_CONFIG = {
     phone: '5511999999999',
     defaultMessage:
-      'Olá! Vim pela Landing Page da CoyTech e gostaria de agendar um Diagnóstico Gratuito sobre Inteligência Artificial, Automação e Desenvolvimento de Sistemas.'
+      'Olá! Vim pela Landing Page da CoyTech e gostaria de agendar um Diagnóstico Gratuito sobre Sistemas Sob Medida e Automação.'
   };
 
   /**
@@ -59,10 +59,10 @@
     },
     {
       id: 'decisao-qualificada',
-      tag: 'Dashboards preditivos em tempo real',
+      tag: 'Dashboards executivos em tempo real',
       title: 'Decisão Qualificada',
       description:
-        'Visibilidade executiva instantânea sobre faturamento, gargalos e margem de contribuição com alertas preditivos baseados em Inteligência Artificial.',
+        'Visibilidade executiva instantânea sobre faturamento, gargalos e margem de contribuição com alertas automáticos baseados em sistemas inteligentes.',
       metricLabel: 'Telemetria para Diretoria',
       metricValue: 'Tempo Real 24/7',
       icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -92,9 +92,9 @@
       phase: 'Passo 2 • Arquitetura Sob Medida',
       title: '2. Planejamento da Solução.',
       description:
-        'Desenhamos o blueprint técnico combinando Inteligência Artificial, automação e desenvolvimento de software, definindo integrações com seu ERP/CRM, regras de negócio e metas claras de performance.',
+        'Desenhamos o blueprint técnico combinando sistemas sob medida e automação de rotinas, definindo integrações com seu ERP/CRM, regras de negócio e metas claras de performance.',
       deliverables: [
-        'Arquitetura de dados, APIs e Agentes de IA',
+        'Arquitetura de dados, APIs e Automação de Rotinas',
         'Protótipo executivo validado com decisores',
         'Cronograma de entrega sem risco operacional'
       ]
@@ -116,7 +116,7 @@
       phase: 'Passo 4 • Sustentação e Escala',
       title: '4. Monitoramento Contínuo.',
       description:
-        'Acompanhamos ativamente os indicadores de performance, disponibilidade das integrações e precisão dos modelos de IA, evoluindo o sistema conforme sua operação escala.',
+        'Acompanhamos ativamente os indicadores de performance, disponibilidade das integrações e estabilidade dos sistemas inteligentes, evoluindo a solução conforme sua operação escala.',
       deliverables: [
         'Observabilidade 24/7 com alertas preventivos',
         'Relatórios executivos de economia gerada',
@@ -132,12 +132,12 @@
     {
       question: 'Preciso substituir meu ERP ou CRM atual (SAP, TOTVS, Salesforce) para implementar as soluções?',
       answer:
-        'Não. Nossas soluções são projetadas para se conectar nativamente via API ao seu ecossistema atual (SAP, TOTVS, Salesforce, Power BI, bancos e sistemas legados). Eliminamos o trabalho manual entre os departamentos sem exigir que você troque as ferramentas que já funcionam.'
+        'Não. Nossas soluções são projetadas para se conectar nativamente via API ao seu ecossistema atual (SAP, TOTVS, Salesforce, Power BI, bancos e planilhas). Eliminamos o trabalho manual entre os departamentos sem exigir que você troque as ferramentas que já funcionam.'
     },
     {
-      question: 'Qual a diferença prática entre os Sistemas Personalizados e os Sistemas Modelos (Plug & Play)?',
+      question: 'Qual a diferença prática entre os Sistemas Sob Medida e os Sistemas Modelos (Plug & Play)?',
       answer:
-        'Os Sistemas Personalizados são construídos do zero para regras de negócio exclusivas que diferenciam sua empresa no mercado. Já os Sistemas Modelos (Plug & Play) possuem 80% da arquitetura de sistemas pronta e validada para resolver dores recorrentes (triagem com IA, portais operacionais, conciliação e dashboards), permitindo implementação acelerada em poucas semanas.'
+        'Os Sistemas Sob Medida são construídos do zero para regras de negócio exclusivas que se adaptam ao jeito de trabalhar da sua empresa. Já os Sistemas Modelos (Plug & Play) possuem 80% da arquitetura pronta e validada para resolver dores recorrentes (automação de rotinas, portais operacionais, conciliação e dashboards), permitindo implementação acelerada em poucas semanas.'
     },
     {
       question: 'Em quanto tempo o investimento se paga (Payback e ROI)?',
@@ -145,9 +145,9 @@
         'Nosso foco é estritamente financeiro. No Diagnóstico Gratuito, priorizamos os gargalos de maior custo operacional. Na média dos nossos projetos B2B, a redução de horas manuais e a eliminação de falhas operacionais geram payback integral entre 2 e 5 meses após a entrada em produção.'
     },
     {
-      question: 'Como funciona a segurança dos dados corporativos ao utilizar Inteligência Artificial?',
+      question: 'Como funciona a segurança dos dados corporativos nos sistemas e automações?',
       answer:
-        'Implementamos arquiteturas privadas com isolamento total de dados, criptografia ponta a ponta, controle de acesso por cargo (RBAC) e conformidade rigorosa com a LGPD. As informações estratégicas da sua empresa jamais são usadas para treinar modelos públicos.'
+        'Implementamos arquiteturas privadas com isolamento total de dados, criptografia ponta a ponta, controle de acesso por cargo (RBAC) e conformidade rigorosa com a LGPD. As informações estratégicas da sua empresa permanecem protegidas e auditáveis em tempo real.'
     }
   ];
 
