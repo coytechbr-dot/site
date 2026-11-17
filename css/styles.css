@@ -1,0 +1,290 @@
+/* ==========================================================================
+   COYTECH — High-Ticket B2B Landing Page
+   Arquitetura Cromática Estrita 60-30-10:
+   - 60% Dominante: Branco Puro (#FFFFFF) -> Fundos principais, cards, textos sobre 30%
+   - 30% Secundária: Azul Acinzentado / Slate Steel Blue (#1E2D3D, #334E68, #647D94, #F1F5F9)
+   - 10% Destaque (Accent): Azul Elétrico Vibrante (#0066FF / #2563EB) -> APENAS CTAs primários, ícones importantes e micro-interações
+   ========================================================================== */
+
+:root {
+  /* 60% Cor Dominante: Branco */
+  --color-60-white: #ffffff;
+
+  /* 30% Cor Secundária: Família Azul Acinzentado (Slate / Steel Blue) */
+  --color-30-steel-900: #16222f;
+  --color-30-steel-800: #1e2d3d;
+  --color-30-steel-700: #2b4156;
+  --color-30-steel-600: #3d5a73;
+  --color-30-steel-500: #52738e;
+  --color-30-steel-300: #b8cadb;
+  --color-30-steel-200: #d5e1ec;
+  --color-30-steel-100: #eaf0f6;
+  --color-30-steel-50: #f3f7fa;
+
+  /* 10% Cor de Destaque: Azul Elétrico High-Conversion */
+  --color-10-accent: #0066ff;
+  --color-10-accent-hover: #0052cc;
+  --color-10-accent-soft: rgba(0, 102, 255, 0.08);
+  --color-10-accent-glow: rgba(0, 102, 255, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  background-color: var(--color-60-white);
+  color: var(--color-30-steel-900);
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header Flutuante: 100% Transparente no Topo e Glassmorphism (#080D16) no Scroll */
+.site-header {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.site-header.header-scrolled {
+  background-color: rgba(8, 13, 22, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(184, 202, 219, 0.12);
+  box-shadow: 0 10px 30px -10px rgba(8, 13, 22, 0.55);
+}
+
+/* Fundo Base #080D16 e Overlay Radial para a Animação Code Rain na Hero Section */
+.hero-coderain-section {
+  background-color: #080d16;
+}
+
+.hero-coderain-overlay {
+  background:
+    radial-gradient(
+      ellipse 65% 70% at 32% 54%,
+      rgba(8, 13, 22, 0.88) 0%,
+      rgba(8, 13, 22, 0.62) 55%,
+      rgba(8, 13, 22, 0.28) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 13, 22, 0.25) 0%,
+      rgba(8, 13, 22, 0.2) 55%,
+      rgba(8, 13, 22, 0.82) 100%
+    );
+}
+
+/* 10% Accent: Botão CTA Primário (Usado estritamente nas ações de conversão) */
+.btn-accent-10 {
+  position: relative;
+  background-color: var(--color-10-accent);
+  color: var(--color-60-white) !important;
+  box-shadow: 0 10px 24px -6px var(--color-10-accent-glow);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.btn-accent-10:hover {
+  background-color: var(--color-10-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -6px rgba(0, 102, 255, 0.48);
+}
+
+.btn-accent-10:active {
+  transform: translateY(0);
+}
+
+/* 30% Secondary: Botão Secundário Outline em Azul Acinzentado */
+.btn-outline-30 {
+  background-color: transparent;
+  color: var(--color-30-steel-800);
+  border: 1.5px solid var(--color-30-steel-300);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline-30:hover {
+  border-color: var(--color-10-accent);
+  color: var(--color-10-accent);
+  background-color: var(--color-10-accent-soft);
+  transform: translateY(-2px);
+}
+
+/* Cards de Serviço e Benefícios (Fundo 60% Branco + Borda 30% Azul Acinzentado + Hover 10% Accent) */
+.card-b2b {
+  position: relative;
+  background-color: var(--color-60-white);
+  border: 1px solid var(--color-30-steel-200);
+  box-shadow: 0 10px 30px -14px rgba(22, 34, 47, 0.07);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card-b2b::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 102, 255, 0.055),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-b2b:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-10-accent);
+  box-shadow: 0 22px 42px -14px rgba(30, 45, 61, 0.14);
+}
+
+.card-b2b:hover::before {
+  opacity: 1;
+}
+
+.card-b2b > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ícones de Destaque (10% Accent) */
+.icon-box-10 {
+  background-color: var(--color-10-accent-soft);
+  color: var(--color-10-accent);
+  border: 1px solid rgba(0, 102, 255, 0.18);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.card-b2b:hover .icon-box-10 {
+  background-color: var(--color-10-accent);
+  color: var(--color-60-white);
+  transform: scale(1.06);
+}
+
+/* Logos de Social Proof em Escala de Cinza / Azul Acinzentado */
+.partner-logo {
+  filter: grayscale(100%);
+  opacity: 0.68;
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Tooltips Flutuantes ao Redor do Mockup de Sistema / CRM */
+@keyframes floatTooltip {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.showcase-tooltip {
+  animation: floatTooltip 5s ease-in-out infinite;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.showcase-tooltip-delayed {
+  animation-delay: 1.8s;
+}
+
+.showcase-tooltip:hover {
+  border-color: var(--color-10-accent);
+}
+
+/* Diagrama de Ecossistema e Integrações (Hub Central Coytech) */
+@keyframes pulseRing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.7;
+  }
+}
+
+.hub-pulse-ring {
+  animation: pulseRing 3.5s ease-in-out infinite;
+}
+
+.integration-node {
+  background-color: #ffffff;
+  border: 1.5px solid #080d16;
+  color: #080d16;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s ease,
+              box-shadow 0.28s ease;
+}
+
+.integration-node:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-10-accent);
+  box-shadow: 0 16px 32px -12px rgba(8, 13, 22, 0.16);
+}
+
+/* Linha Conectora da Timeline de Metodologia */
+.timeline-line-30 {
+  background: linear-gradient(
+    to bottom,
+    var(--color-10-accent) 0%,
+    var(--color-30-steel-600) 70%,
+    var(--color-30-steel-200) 100%
+  );
+}
+
+/* Animações Suaves de Scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.delay-100 { transition-delay: 90ms; }
+.delay-200 { transition-delay: 180ms; }
+.delay-300 { transition-delay: 270ms; }
+.delay-400 { transition-delay: 360ms; }
+
+/* Scrollbar em Azul Acinzentado (30%) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-30-steel-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-30-steel-300);
+  border-radius: 5px;
+  border: 2px solid var(--color-30-steel-50);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-10-accent);
+}
