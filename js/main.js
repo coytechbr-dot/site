@@ -193,7 +193,7 @@ function initHeroCodeRain() {
       ctx.fillStyle = 'rgba(8, 13, 22, 0.08)';
       ctx.fillRect(0, 0, width, height);
 
-      ctx.font = `600 ${fontSize}px "JetBrains Mono", monospace`;
+      ctx.font = `500 ${fontSize}px "IBM Plex Mono", monospace`;
       ctx.textBaseline = 'top';
 
       for (let i = 0; i < columns; i++) {
