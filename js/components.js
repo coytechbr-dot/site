@@ -169,16 +169,16 @@
             <div class="icon-box-10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
               ${item.icon}
             </div>
-            <span class="text-[11px] font-mono font-bold text-[#3d5a73] bg-[#f3f7fa] border border-[#d5e1ec] px-2.5 py-1 rounded-full">
+            <span class="text-[11px] font-mono font-medium uppercase tracking-[0.06em] text-[#3d5a73] bg-[#f3f7fa] border border-[#d5e1ec] px-2.5 py-1 rounded-full">
               0${idx + 1}
             </span>
           </div>
 
-          <h3 id="benefit-title-${item.id}" class="text-xl font-extrabold text-[#16222f] mb-1.5 tracking-tight">
+          <h3 id="benefit-title-${item.id}" class="text-xl font-heading font-semibold text-[#16222f] mb-1.5 tracking-[-0.025em] leading-[1.1]">
             ${item.title}
           </h3>
 
-          <p class="text-xs font-mono font-bold text-[#0066ff] uppercase tracking-wider mb-3">
+          <p class="text-xs font-mono font-medium text-[#0066ff] uppercase tracking-[0.06em] mb-3">
             ${item.tag}
           </p>
 
@@ -189,7 +189,7 @@
 
         <div class="pt-4 border-t border-[#d5e1ec] flex items-center justify-between text-xs">
           <span class="text-[#52738e] font-medium">${item.metricLabel}</span>
-          <span class="font-mono font-bold text-[#1e2d3d]">${item.metricValue}</span>
+          <span class="font-mono font-medium text-[#1e2d3d]">${item.metricValue}</span>
         </div>
       </article>
     `
@@ -209,14 +209,14 @@
         <div class="md:grid md:grid-cols-12 md:gap-8 items-start group">
           <!-- Coluna Esquerda: Tag de Fase -->
           <div class="md:col-span-4 md:text-right md:pr-8 mb-2.5 md:mb-0 pt-1">
-            <span class="inline-block font-mono text-xs font-bold uppercase tracking-wider text-[#38bdf8] bg-[#121C2D] border border-[#22d3ee]/35 px-3 py-1 rounded-full">
+            <span class="inline-block font-mono text-xs font-medium uppercase tracking-[0.06em] text-[#38bdf8] bg-[#121C2D] border border-[#22d3ee]/35 px-3 py-1 rounded-full">
               ${step.phase}
             </span>
           </div>
 
           <!-- Nó Central da Timeline (Destaque Cyan sobre #080D16) -->
           <div class="absolute left-0 md:left-1/3 md:-ml-5 top-0 flex items-center justify-center">
-            <div class="w-10 h-10 rounded-xl bg-[#121C2D] border-2 border-[#22d3ee] text-white font-mono font-bold text-sm flex items-center justify-center shadow-[0_0_20px_rgba(34,211,238,0.28)] group-hover:bg-[#22d3ee] group-hover:text-[#080D16] transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-[#121C2D] border-2 border-[#22d3ee] text-white font-mono font-medium text-sm flex items-center justify-center shadow-[0_0_20px_rgba(34,211,238,0.28)] group-hover:bg-[#22d3ee] group-hover:text-[#080D16] transition-all duration-300">
               ${step.number}
             </div>
           </div>
@@ -224,7 +224,7 @@
           <!-- Coluna Direita: Card #121C2D com Borda Sutil em Cyan e Textos em Branco -->
           <div class="md:col-span-8 md:pl-8">
             <article class="rounded-2xl p-6 lg:p-7 bg-[#121C2D] border border-[#22d3ee]/30 hover:border-[#22d3ee] shadow-[0_18px_40px_-15px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition-all duration-300">
-              <h3 class="text-xl font-extrabold text-white mb-2.5">
+              <h3 class="text-xl font-heading font-semibold tracking-[-0.025em] leading-[1.1] text-white mb-2.5">
                 ${step.title}
               </h3>
               <p class="text-sm text-[#d5e1ec] leading-relaxed mb-5">
@@ -268,7 +268,7 @@
           aria-expanded="${idx === 0 ? 'true' : 'false'}"
           data-faq-index="${idx}"
         >
-          <span class="text-base font-extrabold text-[#16222f]">${item.question}</span>
+          <h3 class="text-base font-heading font-semibold tracking-[-0.025em] leading-[1.1] text-[#16222f]">${item.question}</h3>
           <span class="faq-icon w-8 h-8 rounded-lg bg-[#f3f7fa] border border-[#d5e1ec] flex items-center justify-center text-[#0066ff] shrink-0 transition-transform duration-300 ${
             idx === 0 ? 'rotate-180' : ''
           }">
