@@ -40,8 +40,46 @@ html {
 body {
   background-color: var(--color-60-white);
   color: var(--color-30-steel-900);
-  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
   overflow-x: hidden;
+}
+
+/* Tipografia Estrita:
+   - General Sans (500, 600) em todos os títulos (h1, h2, h3) com letter-spacing: -0.025em e line-height: 1.1
+   - IBM Plex Sans (400, 500) no corpo de texto, parágrafos, links e botões
+   - IBM Plex Mono (500) em números de destaque, métricas, badges/tags em caixa alta (letter-spacing: 0.06em) e numerações de etapas */
+h1,
+h2,
+h3 {
+  font-family: 'General Sans', sans-serif !important;
+  font-weight: 600;
+  letter-spacing: -0.025em !important;
+  line-height: 1.1 !important;
+}
+
+p,
+a,
+button,
+input,
+select,
+textarea,
+label,
+li,
+blockquote {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 500;
+}
+
+.font-mono.uppercase,
+.badge-mono {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 500;
+  letter-spacing: 0.06em !important;
 }
 
 /* Header Flutuante: 100% Transparente no Topo e Glassmorphism (#080D16) no Scroll */
